@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230711 14:07:26.783" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\leand\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Download">
+<arg>https://robotsparebinindustries.com/orders.csv</arg>
+<arg>overwrite=True</arg>
+<msg timestamp="20230711 14:07:35.596" level="FAIL">No keyword with name 'Download' found. Did you mean:
+    Download CSV</msg>
+<status status="FAIL" starttime="20230711 14:07:35.596" endtime="20230711 14:07:35.596"/>
+</kw>
+<status status="PASS" starttime="20230711 14:07:26.827" endtime="20230711 16:02:59.044"/>
+</kw>
+<status status="PASS" starttime="20230711 14:07:26.826" endtime="20230711 16:02:59.047"/>
+</test>
+<status status="PASS" starttime="20230711 14:07:26.784" endtime="20230711 16:02:59.049"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

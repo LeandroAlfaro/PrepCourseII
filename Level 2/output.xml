@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230711 14:21:18.850" rpa="true" schemaversion="3">
+<suite id="s1" name="Tasks" source="c:\Training Robocorp\Level 2\Ejercicio 1\tasks.robot">
+<test id="s1-t1" name="Saves the order HTML receipt as a PDF file" line="19">
+<kw name="Download CSV">
+<kw name="Download" library="RPA.HTTP">
+<arg>https://robotsparebinindustries.com/orders.csv</arg>
+<arg>overwrite=True</arg>
+<doc>An alias for the ``HTTP Get`` keyword.</doc>
+<msg timestamp="20230711 14:21:21.923" level="INFO">Creating a new HTTP session</msg>
+<msg timestamp="20230711 14:21:21.927" level="INFO">Creating Session using : alias=rpasession_alias.httpsrobotsparebinindustries.com, url=https://robotsparebinindustries.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20230711 14:21:21.922" endtime="20230711 14:21:22.387"/>
+</kw>
+<status status="PASS" starttime="20230711 14:21:21.922" endtime="20230711 14:21:22.387"/>
+</kw>
+<kw name="Read File">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>orders.csv</arg>
+<doc>Open an existing Excel workbook.</doc>
+<msg timestamp="20230711 14:21:22.390" level="INFO">Failed to open as Excel Binary Format (.xls): Unsupported format, or corrupt file: Expected BOF record; found b'Order nu'</msg>
+<msg timestamp="20230711 14:21:22.391" level="FAIL">ValueError: Failed to open Excel file (C:\Training Robocorp\Level 2\orders.csv), verify that the path and extension are correct</msg>
+<status status="FAIL" starttime="20230711 14:21:22.388" endtime="20230711 14:21:22.395"/>
+</kw>
+<kw name="Read Worksheet As Table" library="RPA.Excel.Files">
+<var>${orders}</var>
+<arg>header=True</arg>
+<doc>Read the contents of a worksheet into a Table container. Allows
+sorting/filtering/manipulating using the ``RPA.Tables`` library.</doc>
+<status status="NOT RUN" starttime="20230711 14:21:22.396" endtime="20230711 14:21:22.396"/>
+</kw>
+<kw name="Close Workbook" library="RPA.Excel.Files">
+<doc>Close the active workbook.</doc>
+<status status="NOT RUN" starttime="20230711 14:21:22.397" endtime="20230711 14:21:22.397"/>
+</kw>
+<return>
+<value>${orders}</value>
+<status status="NOT RUN" starttime="20230711 14:21:22.397" endtime="20230711 14:21:22.397"/>
+</return>
+<status status="FAIL" starttime="20230711 14:21:22.388" endtime="20230711 14:21:22.398"/>
+</kw>
+<status status="FAIL" starttime="20230711 14:21:21.920" endtime="20230711 14:21:22.399">ValueError: Failed to open Excel file (C:\Training Robocorp\Level 2\orders.csv), verify that the path and extension are correct</status>
+</test>
+<doc>Orders robots from RobotSpareBin Industries Inc.
+Saves the order HTML receipt as a PDF file.
+Saves the screenshot of the ordered robot.
+Embeds the screenshot of the robot to the PDF receipt.
+Creates ZIP archive of the receipts and the images.</doc>
+<status status="FAIL" starttime="20230711 14:21:18.858" endtime="20230711 14:21:22.401"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
